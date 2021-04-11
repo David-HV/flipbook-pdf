@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = 1050, user-scalable = no" />
+        <script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+        <script type="text/javascript" src="js/modernizr.2.5.3.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell&display=swap" rel="stylesheet">
+        <title>| PDF Luisilla |</title>
+    </head>
+    <body>
+        <header id="main-header">
+            <!--Logo del header-->
+            <a id="logo-header" href="#">
+                <span class="site-name">Luisa Darina</span>
+                <span class="site-desc">Título del PDF aquí</span>
+            </a>
+            <!--Botón de descargas-->
+            <nav>
+                <ul>
+                    <li><a href="files/file.pdf" download>Descargar PDF</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Define páginas de el libro-->
+        <div class="flipbook-viewport" id="contenido">
+            <div class="container">
+                <div class="flipbook">
+                    <!--Páginas-->
+                    <div style="background-image:url(pages/1.png)"></div>
+                    <div style="background-image:url(pages/2.png)"></div>
+                    <div style="background-image:url(pages/3.png)"></div>
+                    <div style="background-image:url(pages/4.png)"></div>
+                    <div style="background-image:url(pages/5.png)"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--Script que define funciones de la página-->
+        <script type="text/javascript">
+
+        function loadApp() {
+            // Create the flipbook
+
+            $('.flipbook').turn({
+
+                    // Ancho
+                    width:998,
+            
+                    // Alto
+                    height:650,
+
+                    // Elevation
+                    elevation: 50,
+                    
+                    // Enable gradients
+                    gradients: true,
+                    
+                    // Auto center this flipbook
+                    autoCenter: true
+
+            });
+        }
+
+        // Load the HTML4 version if there's not CSS transform
+        yepnope({
+            test : Modernizr.csstransforms,
+            yep: ['js/turn.js'],
+            nope: ['js/turn.html4.min.js'],
+            both: ['css/basic.css'],
+            complete: loadApp
+        });
+
+        </script>
+    </body>
+</html>
