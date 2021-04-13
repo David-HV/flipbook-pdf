@@ -27,12 +27,12 @@ img {
 }
 
 #main-header {
-	background: #333;
+	background: #ce93d8;
 	color: white;
 	height: 80px;
 }	
 	#main-header a {
-		color: white;
+		color: #000000;
 	}
 
 /*
@@ -50,14 +50,14 @@ img {
 	#logo-header .site-name {
 		display: block;
 		font-weight: 700;
-		font-size: 1.2em;
+		font-size: 25px;
 	}
 	
 	#logo-header .site-desc {
 		display: block;
 		font-weight: 300;
-		font-size: 0.8em;
-		color: #999;
+		font-size: 14px;
+		color: #000000;
 	}
 	
 
@@ -83,8 +83,14 @@ nav {
 				display: block;
 				padding: 0 10px;
 				text-decoration: none;
+				font-size: 20px;
 			}
 			
 				nav ul li a:hover {
-					background: #0b76a6;
+					background-color: #c62828;
+					color: #ffffff;
 				}
+				
+					#hover-txt:hover a {
+						color:#ffffff;
+					}

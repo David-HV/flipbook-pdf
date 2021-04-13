@@ -2,7 +2,7 @@
 
 body{
 	overflow:hidden;
-	background-color:#fcfcfc;
+	background-color:#ffffff;
 	margin:0;
 	padding:0;
 }
@@ -15,14 +15,14 @@ body{
 
 .flipbook-viewport .container{
 	position:absolute;
-	top:50%;
-	left:50%;
+	top:45%;
+	left:47%;
 	margin:auto;
 }
 
 .flipbook-viewport .flipbook{
-	width:922px;
-	height:600px;
+	width:1030px;
+	height:670px;
 	left:-461px;
 	top:-300px;
 }
